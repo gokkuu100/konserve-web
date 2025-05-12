@@ -1,0 +1,39 @@
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #ffffff;
+  }
+  
+  .loading-svg {
+    animation: rotate 2s linear infinite;
+  }
+  
+  .loading-path {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: draw 2s ease-in-out infinite;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 300;
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -300;
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
