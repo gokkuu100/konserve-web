@@ -17,20 +17,20 @@ Track development and implementation progress for the Konserve public-facing web
 - [x] Rewards Given Out (KES)
 - [x] Number of Partnered Recycling Stations
 - [x] Metric Counters Animated on Scroll
-- [ ] Backend connected to metrics
+- [x] Backend connected to metrics
 
 ### 🙋 User Engagement
 - [x] Sign-up Portals for:
   - [x] Organizations
   - [x] Collection Agencies
   - [x] Waste Buyers
-- [ ] Testimonials Section (Carousel or Grid)
-- [ ] Contact Form (with dropdown for inquiry type)
+- [x] Testimonials Section (Carousel or Grid)
+- [x] Contact Form (with dropdown for inquiry type)
 
 ### 🧭 Informational Content
 - [x] About Konserve Section
 - [x] How It Works (Visual Steps)
-- [ ] Partner Logos Section
+- [x] Partner Logos Section
 - [ ] Blog/Knowledge Center (Optional)
 
 ---
@@ -38,15 +38,15 @@ Track development and implementation progress for the Konserve public-facing web
 ## 📱 Responsiveness & Aesthetics
 - [x] Mobile Design Tested
 - [x] Scroll animations
-- [ ] Dark/Light Mode (Optional)
+- [x] Dark/Light Mode (Optional)
 - [x] Iconography consistent across sections
 
 ---
 
 ## 🧪 Testing
-- [ ] Link checks
-- [ ] Form validation
-- [ ] Backend metric updates tested
+- [x] Link checks
+- [x] Form validation
+- [x] Backend metric updates tested
 - [ ] SEO optimization in place
 
 ---

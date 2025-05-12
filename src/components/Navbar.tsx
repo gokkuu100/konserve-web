@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +26,7 @@ const Navbar = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md shadow-md py-2' 
+          ? 'bg-white/90 backdrop-blur-md shadow-md py-2' 
           : 'bg-transparent py-4'
       }`}
     >
@@ -47,76 +48,94 @@ const Navbar = () => {
           <Link href="#impact" className="text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors">
             Our Impact
           </Link>
-          <Link href="#join" className="text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors">
-            Join Us
+          <Link href="#partners" className="text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors">
+            Partners
+          </Link>
+          <Link href="#testimonials" className="text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors">
+            Testimonials
           </Link>
           <Link href="#contact" className="text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors">
             Contact
           </Link>
+          
+          {/* Theme Toggle */}
+          <ThemeToggle />
+          
           <Link 
-            href="#signup" 
+            href="#join" 
             className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-md transition-colors"
           >
             Get Started
           </Link>
         </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button 
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          <span className={`block w-6 h-0.5 bg-neutral-800 dark:bg-white transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-neutral-800 dark:bg-white transition-opacity ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-          <span className={`block w-6 h-0.5 bg-neutral-800 dark:bg-white transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-        </button>
+        {/* Mobile Menu Toggle and Theme Toggle */}
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          
+          <button 
+            className="flex flex-col gap-1.5 p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            <span className={`block w-6 h-0.5 bg-neutral-800 transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-neutral-800 transition-opacity ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+            <span className={`block w-6 h-0.5 bg-neutral-800 transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation Menu */}
       <div 
-        className={`md:hidden absolute top-full left-0 right-0 bg-white dark:bg-neutral-900 shadow-lg transition-all duration-300 overflow-hidden ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-lg transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 py-4' : 'max-h-0'
         }`}
       >
         <nav className="container mx-auto px-4 flex flex-col gap-4">
           <Link 
             href="#how-it-works" 
-            className="py-2 text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors"
+            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             How It Works
           </Link>
           <Link 
             href="#about" 
-            className="py-2 text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors"
+            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
           </Link>
           <Link 
             href="#impact" 
-            className="py-2 text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors"
+            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Our Impact
           </Link>
           <Link 
-            href="#join" 
-            className="py-2 text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors"
+            href="#partners" 
+            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Join Us
+            Partners
+          </Link>
+          <Link 
+            href="#testimonials" 
+            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Testimonials
           </Link>
           <Link 
             href="#contact" 
-            className="py-2 text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors"
+            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
           </Link>
           <Link 
-            href="#signup" 
+            href="#join" 
             className="mt-2 bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-md text-center transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >

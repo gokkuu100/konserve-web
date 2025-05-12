@@ -1,0 +1,85 @@
+/* Dark Mode Styles */
+
+/* Main backgrounds */
+.dark-mode section {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+
+/* Text */
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4, 
+.dark-mode h5, 
+.dark-mode h6 {
+  color: #ffffff !important;
+}
+
+.dark-mode p {
+  color: #e0e0e0 !important;
+}
+
+/* Cards and containers */
+.dark-mode .bg-white {
+  background-color: #1a1a1a !important;
+}
+
+/* Navbar */
+.dark-mode header {
+  background-color: rgba(10, 10, 10, 0.9) !important;
+}
+
+.dark-mode header.scrolled {
+  background-color: rgba(10, 10, 10, 0.9) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-mode nav a {
+  color: #e0e0e0 !important;
+}
+
+.dark-mode nav a:hover {
+  color: #8aac7e !important;
+}
+
+/* Mobile menu */
+.dark-mode .mobile-menu {
+  background-color: #1a1a1a !important;
+}
+
+.dark-mode .hamburger span {
+  background-color: #ffffff !important;
+}
+
+/* Buttons */
+.dark-mode button.primary {
+  background-color: #688e5c !important;
+  color: #ffffff !important;
+}
+
+.dark-mode button.secondary {
+  background-color: transparent !important;
+  border-color: #688e5c !important;
+  color: #688e5c !important;
+}
+
+/* Footer */
+.dark-mode footer {
+  background-color: #0a0a0a !important;
+  color: #e0e0e0 !important;
+}
+
+/* Form inputs */
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+  border-color: #333333 !important;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: #666666 !important;
+} 
