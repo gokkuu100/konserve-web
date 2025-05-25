@@ -3,7 +3,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-// Sample testimonial data
+// User types for filtering
+type UserType = 'All' | 'Organization' | 'Collection Agency' | 'Waste Buyer';
+
+// Sample testimonial data with user types
 const testimonials = [
   {
     id: 1,

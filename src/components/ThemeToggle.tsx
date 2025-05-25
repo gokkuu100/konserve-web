@@ -9,7 +9,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 transition-colors"
+      className="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 transition-all focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
       aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       <span className="sr-only">{theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}</span>
@@ -20,6 +20,9 @@ const ThemeToggle = () => {
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className="absolute h-5 w-5"
         variants={{
           hidden: { opacity: 0, rotate: -180, scale: 0.5 },
@@ -46,6 +49,9 @@ const ThemeToggle = () => {
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className="absolute h-5 w-5"
         variants={{
           hidden: { opacity: 0, rotate: 180, scale: 0.5 },
@@ -61,4 +67,4 @@ const ThemeToggle = () => {
   );
 };
 
-export default ThemeToggle; 
+export default ThemeToggle;

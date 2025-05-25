@@ -103,7 +103,7 @@ const Metrics = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">Our Impact So Far</h2>
           <p className="text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
-            Real-time metrics showing Konserve's growing impact on waste management and environmental sustainability.
+            Real-time metrics showing Konserve&apos;s growing impact on waste management and environmental sustainability.
           </p>
         </motion.div>
         
@@ -187,25 +187,7 @@ const Metrics = () => {
           </div>
         )}
         
-        {/* Impact Report Download - Optional */}
-        <motion.div 
-          className="mt-12 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <a 
-            href="#download-report" 
-            className="inline-flex items-center gap-2 bg-white dark:bg-neutral-800 border border-primary-200 dark:border-primary-800 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-neutral-700 font-medium py-2 px-4 rounded-md transition-colors"
-          >
-            <span>See Full Impact Report</span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
-            </svg>
-          </a>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">PDF Download (1.2MB)</p>
-        </motion.div>
+        {/* Removed Impact Report Download section - now using dedicated FullImpactReportDownload component */}
       </div>
     </section>
   );

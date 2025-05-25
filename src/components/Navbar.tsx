@@ -26,7 +26,7 @@ const Navbar = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/90 backdrop-blur-md shadow-md py-2' 
+          ? 'bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md shadow-md dark:shadow-neutral-800/30 py-2' 
           : 'bg-transparent py-4'
       }`}
     >
@@ -47,6 +47,9 @@ const Navbar = () => {
           </Link>
           <Link href="#impact" className="text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors">
             Our Impact
+          </Link>
+          <Link href="#blog" className="text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors">
+            Knowledge Center
           </Link>
           <Link href="#partners" className="text-neutral-700 hover:text-primary-500 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors">
             Partners
@@ -78,58 +81,65 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
-            <span className={`block w-6 h-0.5 bg-neutral-800 transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`block w-6 h-0.5 bg-neutral-800 transition-opacity ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-            <span className={`block w-6 h-0.5 bg-neutral-800 transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-neutral-800 dark:bg-neutral-200 transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-neutral-800 dark:bg-neutral-200 transition-opacity ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+            <span className={`block w-6 h-0.5 bg-neutral-800 dark:bg-neutral-200 transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation Menu */}
       <div 
-        className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-lg transition-all duration-300 overflow-hidden ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-white dark:bg-neutral-900 shadow-lg dark:shadow-neutral-800/30 transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 py-4' : 'max-h-0'
         }`}
       >
         <nav className="container mx-auto px-4 flex flex-col gap-4">
           <Link 
             href="#how-it-works" 
-            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
+            className="py-2 text-neutral-700 dark:text-neutral-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             How It Works
           </Link>
           <Link 
             href="#about" 
-            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
+            className="py-2 text-neutral-700 dark:text-neutral-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
           </Link>
           <Link 
             href="#impact" 
-            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
+            className="py-2 text-neutral-700 dark:text-neutral-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Our Impact
           </Link>
           <Link 
+            href="#blog" 
+            className="py-2 text-neutral-700 dark:text-neutral-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Knowledge Center
+          </Link>
+          <Link 
             href="#partners" 
-            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
+            className="py-2 text-neutral-700 dark:text-neutral-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Partners
           </Link>
           <Link 
             href="#testimonials" 
-            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
+            className="py-2 text-neutral-700 dark:text-neutral-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Testimonials
           </Link>
           <Link 
             href="#contact" 
-            className="py-2 text-neutral-700 hover:text-primary-500 transition-colors"
+            className="py-2 text-neutral-700 dark:text-neutral-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
@@ -147,4 +157,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

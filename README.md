@@ -20,6 +20,49 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Dark Mode Implementation
+
+This project includes a complete dark mode implementation with the following features:
+
+### Usage
+
+- **Toggle Button**: Click the sun/moon icon in the navigation bar to switch between light and dark modes
+- **Theme Selector**: Use the `<ThemeSelector />` component for more explicit theme selection
+- **System Preference**: On first load, the theme will match the user's system preference
+- **Persistence**: Theme choice is saved in localStorage
+
+### Implementation Details
+
+- **Tailwind Integration**: Uses Tailwind's `dark:` variant with `darkMode: 'class'` config
+- **CSS Variables**: Custom CSS variables provide consistent theming 
+- **Smooth Transitions**: Includes transitions for a smooth theme switch experience
+- **No Flash of Wrong Theme**: Server/client hydration handled properly to prevent flash of wrong theme
+
+### For Developers
+
+To use dark mode in your components:
+
+```tsx
+// Use Tailwind's dark variant
+<div className="bg-white dark:bg-neutral-900 text-black dark:text-white">
+  Dark mode compatible content
+</div>
+
+// Access current theme in components
+import { useTheme } from '@/context/ThemeContext';
+
+function MyComponent() {
+  const { theme, toggleTheme } = useTheme();
+  
+  return (
+    <div>
+      Current theme: {theme}
+      <button onClick={toggleTheme}>Toggle theme</button>
+    </div>
+  );
+}
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

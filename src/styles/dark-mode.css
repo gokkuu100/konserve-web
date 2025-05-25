@@ -1,85 +1,81 @@
-/* Dark Mode Styles */
+/* Dark Mode Styles - Enhanced for Tailwind compatibility */
 
-/* Main backgrounds */
-.dark-mode section {
-  background-color: #0a0a0a !important;
-  color: #ededed !important;
+/* 
+  These styles provide fallback styling for elements that might not use
+  Tailwind's dark: variant or for third-party components.
+  
+  For most components, prefer using Tailwind's dark: variant in the component files.
+*/
+
+/* Main backgrounds - fallback for non-Tailwind elements */
+html.dark section:not([class*="bg-"]),
+html.dark-mode section:not([class*="bg-"]) {
+  background-color: #0a0a0a;
+  color: #ededed;
 }
 
-/* Text */
-.dark-mode h1, 
-.dark-mode h2, 
-.dark-mode h3, 
-.dark-mode h4, 
-.dark-mode h5, 
-.dark-mode h6 {
-  color: #ffffff !important;
+/* Text fallbacks */
+html.dark h1:not([class*="text-"]), 
+html.dark h2:not([class*="text-"]), 
+html.dark h3:not([class*="text-"]), 
+html.dark h4:not([class*="text-"]), 
+html.dark h5:not([class*="text-"]), 
+html.dark h6:not([class*="text-"]),
+html.dark-mode h1:not([class*="text-"]), 
+html.dark-mode h2:not([class*="text-"]), 
+html.dark-mode h3:not([class*="text-"]), 
+html.dark-mode h4:not([class*="text-"]), 
+html.dark-mode h5:not([class*="text-"]), 
+html.dark-mode h6:not([class*="text-"]) {
+  color: #ffffff;
 }
 
-.dark-mode p {
-  color: #e0e0e0 !important;
+html.dark p:not([class*="text-"]),
+html.dark-mode p:not([class*="text-"]) {
+  color: #e0e0e0;
 }
 
 /* Cards and containers */
-.dark-mode .bg-white {
-  background-color: #1a1a1a !important;
+html.dark .bg-white:not([class*="dark:"]),
+html.dark-mode .bg-white:not([class*="dark:"]) {
+  background-color: #1a1a1a;
 }
 
-/* Navbar */
-.dark-mode header {
-  background-color: rgba(10, 10, 10, 0.9) !important;
+/* For accessibility - ensure text has sufficient contrast */
+html.dark .text-gray-600:not([class*="dark:"]),
+html.dark .text-gray-700:not([class*="dark:"]),
+html.dark .text-gray-800:not([class*="dark:"]),
+html.dark .text-gray-900:not([class*="dark:"]),
+html.dark .text-neutral-600:not([class*="dark:"]),
+html.dark .text-neutral-700:not([class*="dark:"]),
+html.dark .text-neutral-800:not([class*="dark:"]),
+html.dark .text-neutral-900:not([class*="dark:"]),
+html.dark-mode .text-gray-600:not([class*="dark:"]),
+html.dark-mode .text-gray-700:not([class*="dark:"]),
+html.dark-mode .text-gray-800:not([class*="dark:"]),
+html.dark-mode .text-gray-900:not([class*="dark:"]),
+html.dark-mode .text-neutral-600:not([class*="dark:"]),
+html.dark-mode .text-neutral-700:not([class*="dark:"]),
+html.dark-mode .text-neutral-800:not([class*="dark:"]),
+html.dark-mode .text-neutral-900:not([class*="dark:"]) {
+  color: #e0e0e0;
 }
 
-.dark-mode header.scrolled {
-  background-color: rgba(10, 10, 10, 0.9) !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+/* Form inputs - fallbacks */
+html.dark input:not([class*="bg-"]),
+html.dark textarea:not([class*="bg-"]),
+html.dark select:not([class*="bg-"]),
+html.dark-mode input:not([class*="bg-"]),
+html.dark-mode textarea:not([class*="bg-"]),
+html.dark-mode select:not([class*="bg-"]) {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border-color: #333333;
 }
 
-.dark-mode nav a {
-  color: #e0e0e0 !important;
+html.dark input::placeholder,
+html.dark textarea::placeholder,
+html.dark-mode input::placeholder,
+html.dark-mode textarea::placeholder {
+  color: #666666;
 }
-
-.dark-mode nav a:hover {
-  color: #8aac7e !important;
-}
-
-/* Mobile menu */
-.dark-mode .mobile-menu {
-  background-color: #1a1a1a !important;
-}
-
-.dark-mode .hamburger span {
-  background-color: #ffffff !important;
-}
-
-/* Buttons */
-.dark-mode button.primary {
-  background-color: #688e5c !important;
-  color: #ffffff !important;
-}
-
-.dark-mode button.secondary {
-  background-color: transparent !important;
-  border-color: #688e5c !important;
-  color: #688e5c !important;
-}
-
-/* Footer */
-.dark-mode footer {
-  background-color: #0a0a0a !important;
-  color: #e0e0e0 !important;
-}
-
-/* Form inputs */
-.dark-mode input,
-.dark-mode textarea,
-.dark-mode select {
-  background-color: #1a1a1a !important;
-  color: #e0e0e0 !important;
-  border-color: #333333 !important;
-}
-
-.dark-mode input::placeholder,
-.dark-mode textarea::placeholder {
-  color: #666666 !important;
-} 
